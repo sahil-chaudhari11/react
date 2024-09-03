@@ -1,12 +1,15 @@
-*{margin: 0; padding: 0; box-sizing: border-box;}
-
-.sahil{
-  color: #fa9191;
-  text-align: center;
-  text-transform: capitalize;
-  font-weight: bold;
+/* styles.css */
+.button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 }
 
-.pankaj{
-  width: 100px;
+.button:hover {
+  background-color: #45a049;
+}
+.sahil{
+  background-color: aqua;
 }
