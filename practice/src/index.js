@@ -14,7 +14,12 @@ ReactDOM.render(
 <h1 style={sahil}>{name}</h1>,
 
 
-<input type='text'placeholder='type here'/>,
+<input type='text'placeholder='type here'/>
+<input type='email'placeholder='type here'/>
+
+
+
+
 
 
  
