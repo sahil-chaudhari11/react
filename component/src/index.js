@@ -1,20 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Heading from './Heading';
-import Para from './Para';
-import Order from './Order';
+import React from  "react";
+import ReactDom from "react-dom";
+import App from "./App";
 
-
-ReactDOM.render(
-  <>
-<Heading/>
-<Para/>
-<Order/>
-
-
-
-
+ReactDom.render(
+ 
+  <App/>,
   
-  </>,
-  document.getElementById('root')
+  
+  document.getElementById("root")
 );
