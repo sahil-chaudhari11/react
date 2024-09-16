@@ -1,57 +1,107 @@
-import React from  'react';
-import ReactDOM from'react-dom';
-import img from './images/Dark_Souls_Cover_Art.jpg';
-import ironman from'./images/ironman.jpg'
-import steve from './images/steve.jpg'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Sdata from './Sdata';
 
-
-function Card(props){
-  console.log(props);
-  
- return(
-  <>
-  <div className='cards'>
-    <div className='card'>
-      <img 
-      src={props.imgsrc} 
-      alt='mypic' 
-      className='card__img'
+function Card(props) {
+  return (
+    <div
+      style={{
+        backgroundColor: '#fff',
+        borderRadius: '10px',
+        boxShadow: '0 8px 16px rgba(0, 0, 0, 0.1)',
+        width: '300px',
+        overflow: 'hidden',
+        textAlign: 'center',
+        margin: '20px',
+        transition: 'transform 0.3s ease, boxShadow 0.3s ease',
+      }}
+    >
+      <img
+        src={props.imgsrc}
+        alt={props.sname}
+        style={{
+          width: '100%',
+          height: '200px',
+          objectFit: 'cover',
+        }}
       />
-
-      <div className='card__info'>
-        <span className='card__category'>{props.title} </span>
-        <h3 className='card__title'>{props.sname}</h3>
-        <a href={props.link} target="_blank">
-          <button> Watch Now</button>
+      <div style={{ padding: '20px' }}>
+        <h2
+          style={{
+            fontSize: '1.8em',
+            margin: '15px 0',
+            color: '#34495e',
+          }}
+        >
+          {props.sname}
+        </h2>
+        <p>{props.title}</p>
+        <a
+          href={props.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            textDecoration: 'none',
+            backgroundColor: '#e74c3c',
+            color: 'white',
+            padding: '10px 25px',
+            borderRadius: '50px',
+            fontSize: '1em',
+            fontWeight: '500',
+            transition: 'background-color 0.3s ease',
+          }}
+        >
+          Watch Now
         </a>
-
       </div>
-
     </div>
-  </div>
-  </>
- );
+  );
 }
 
-ReactDOM.render(<>
-<Card imgsrc={img}
-title="A Netflix Original Series"
-sname="ironman"
-link="https://store.steampowered.com/app/374320/DARK_SOULS_III/"
-/>
+ReactDOM.render(
+  <>
+    <h1
+      style={{
+        textAlign: 'center',
+        color: '#2c3e50',
+        fontSize: '2.5em',
+        fontWeight: '600',
+        margin: '30px 0',
+      }}
+    >
+      List of Top Netflix Series in 2024
+    </h1>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        gap: '20px',
+        padding: '20px',
+      }}
+    >
+      
+     
+     {Sdata.map( (val)=>{
+      return(
+        <Card
+    imgsrc={val.imgsrc}
+    title={val.title}
+    sname={val.sname}
+    link={val.link}
+  />
 
-<Card imgsrc={ironman}
-title="This Is The Ironman"
-sname="ironman"
-link="https://www.ironman.com/im703-races"
-/>
-<Card imgsrc={steve}
-title="This Is The Steve Roger"
-sname="Steve Roger"
-link="https://marvelcinematicuniverse.fandom.com/wiki/Steve_Rogers"
-/>
-
-</>,
-  
+      );
+     })}
+    </div>
+  </>,
   document.getElementById('root')
 );
+
+
+function Myname(a,b){
+  return a+b
+
+}
+
+const myname=(a,b)=> a+b;
+

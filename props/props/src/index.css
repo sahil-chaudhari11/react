@@ -1,13 +1,80 @@
+/* General Styles */
 body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  text-align: center;
+  margin: 30px 0;
+  color: #2c3e50;
+  font-size: 2.5em;
+  font-weight: 600;
 }
+
+/* Card Grid */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card Style */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Increased width for a better horizontal layout */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Image inside the card */
+.card img {
+  width: 100%; /* Ensures the image takes the full width of the card */
+  height: 200px; /* Adjusted height */
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content h2 {
+  font-size: 1.8em;
+  margin: 15px 0;
+  color: #34495e;
+}
+
+.card-content p {
+  color: #7f8c8d;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.card-content a {
+  text-decoration: none;
+  background-color: #e74c3c;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 1em;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.card-content a:hover {
+  background-color: #c0392b;
+}
+
